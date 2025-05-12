@@ -22,7 +22,7 @@ Dern-Support is a web-based platform designed to manage repair requests, track j
 
 ## Tech Stack
 
-- **Frontend:** React.js, Bootstrap
+- **Frontend:** React.js, Tailwind
 - **Backend:** Laravel
 - **Database:** MySQL
 - **Authentication:** Laravel’s built-in authentication system
