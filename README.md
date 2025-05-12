@@ -1,58 +1,46 @@
-# Dern-Support System Documentation
+# Dern-Support System
 
-## Algorithm Design Documentation
+Dern-Support is a web-based platform designed to manage repair requests, track job assignments, and provide an efficient solution for both customers and technicians. The system allows customers to submit repair requests, track their status, and get notified about progress. For admins, it facilitates managing requests, assigning technicians, and monitoring system activity.
 
-### 1. Repair Scheduling Process
+## Features
 
-This section outlines the logic for customers scheduling a repair request, from login to confirmation.
+### Customer Features:
+- **User Registration & Login:** Secure user authentication with email verification.
+- **Repair Request Submission:** Customers can submit repair requests with detailed device information and issues.
+- **Repair Status Tracking:** Customers can track the status of their repair requests in real-time (Pending, In Progress, Completed).
+- **Job Scheduling:** Customers can schedule repair appointments based on available time slots.
 
-**Steps in the Process:**
-1. Customer logs into the system.
-2. They submit a repair request, including device details and issues.
-3. The system checks for available time slots.
-4. If a time slot is available, the request is confirmed.
-5. If no slots are available, the customer must choose a different date/time.
-6. The system assigns a technician automatically or allows admin selection.
-7. Confirmation is sent to both the customer and the technician.
+### Admin Features:
+- **Manage Requests:** Admins can view, approve, or reject repair requests.
+- **Job Assignment:** Admins assign technicians to repair jobs based on availability.
+- **Technician Notification:** Technicians are automatically notified of their assignments.
 
-#### Flowchart:
-```plaintext
-  +------------------------+
-  |    Customer Logs In    |
-  +------------------------+
-            |
-            v
-  +------------------------+
-  | Submit Repair Request  |
-  +------------------------+
-            |
-            v
-  +------------------------+
-  | Check for Available    |
-  |   Time Slots           |
-  +------------------------+
-            |
-       +----+-----+
-       |          |
-       v          v
-  +-------------+   +----------------------+
-  | Slot Available? | No Slot Available     |
-  +-------------+   +----------------------+
-       |              |
-       v              v
-  +-------------------+   +---------------------+
-  | Confirm Repair     |   | Ask Customer for     |
-  | Slot Assignment    |   | New Date/Time        |
-  +-------------------+   +---------------------+
-            |
-            v
-  +-------------------------+
-  | Assign Technician        |
-  | (Auto or Admin)          |
-  +-------------------------+
-            |
-            v
-  +------------------------+
-  | Send Confirmation to   |
-  | Customer & Technician  |
-  +------------------------+
+### General Features:
+- **Real-Time Updates:** Use of AJAX to update users and technicians without page reloads.
+- **Pagination:** Efficient display of repair requests for easy navigation, even with large datasets.
+- **Image Optimization:** The system compresses and resizes uploaded images to save storage.
+
+## Tech Stack
+
+- **Frontend:** React.js, Bootstrap
+- **Backend:** Laravel
+- **Database:** MySQL
+- **Authentication:** Laravel’s built-in authentication system
+- **Image Processing:** Intervention Image (for image optimization)
+
+## Installation
+
+To get a local copy of the project up and running, follow these steps:
+
+### Prerequisites
+- **PHP** (version 7.4 or higher)
+- **Composer**
+- **Node.js** (version 14 or higher)
+- **MySQL** (for the database)
+
+### Setup Instructions
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Hussein-luigi/Dern-Support.git
+   cd Dern-Support
