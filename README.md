@@ -44,3 +44,19 @@ To get a local copy of the project up and running, follow these steps:
    ```bash
    git clone https://github.com/Hussein-luigi/Dern-Support.git
    cd Dern-Support
+
+2. **Install backend dependencies:** 
+   ```bash
+   composer install
+3. **Run database migrations:**
+   ```bash
+   php artisan migrate
+4. **Install frontend dependencies:**
+   ```bash
+   npm install
+5. **Start the Laravel server:**
+   ```bash
+   php artisan serve
+6. **Run frontend development server:**
+   ```bash
+   npm run dev
